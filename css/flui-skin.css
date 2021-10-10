@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "JetBrains Mono";
+    color: white;
+}
+
+.logo {
+    display: flex;
+    font-size: 50px;
+    position: absolute;
+    top: 20px;
+    left: 55px;
+    font-weight: 800;
+}
+
+.home-section {
+    min-height: 100vh;
+    background-image: url(../img/bg-2.jpg);
+    background-size: 1600px 900px;
+}
+
+.home-content::after {
+    left: -20px;
+    top: -10px;
+    content: '';
+    height: 220px;
+    width: 420px;
+    background-color: rgb(109, 109, 109, 0.4);
+    position: absolute;
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    border-radius: 10px;
+    z-index: -1;
+    backdrop-filter: blur(3px);
+    box-shadow: 3px 3px 3px 2px rgb(112, 120, 126);
+}
+
+.home-content {
+    display: flex;
+    position: absolute;
+    top: 250px;
+    left: 80px;
+    z-index: 1;
+}
+
+.home-content h1 {
+    font-size: 50px;
+}
+
+.home-content button {
+    height: 45px;
+    width: 80px;
+    font-size: 14px;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.home-section .side-bar {
+    display: flex;
+    height: 100vh;
+    width: 80px;
+    position: absolute;
+    right: 0;
+    background: linear-gradient(410deg, rgb(45, 191, 248, 1), rgb(83, 47, 38, 0.5));
+    backdrop-filter: blur(3px);
+}
+
+.home-section .side-menu {
+    display: flex;
+    height: 50px;
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    border-radius: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    position: relative;
+    left: 7px;
+    top: 5px;
+    border-radius: 5px;
+    width: 35px;
+    height: 5px;
+    background-color: rgb(65, 65, 65, 0.8);
+    margin: 6px 0;
+    transition: all 0.4s ease;
+}
+
+
+/* Rotate first bar */
+
+.change .bar1 {
+    /* -webkit-transform: rotate(-45deg) translate(-9px, 6px); */
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+
+/* Fade out the second bar */
+
+.change .bar2 {
+    opacity: 0;
+}
+
+
+/* Rotate last bar */
+
+.change .bar3 {
+    /* -webkit-transform: rotate(45deg) translate(-8px, -8px); */
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.social-media i {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-media i:hover {
+    cursor: pointer;
+    color: rgb(71, 45, 41);
+}
+
+.social-media {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    font-size: 30px;
+}
+
+footer {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    left: 580px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    color: rgb(59, 31, 31);
+    border-radius: 10px;
+    border: 1px solid white;
+    backdrop-filter: blur(3px);
+}
